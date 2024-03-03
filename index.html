@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap CDN CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>PRUEBA MOD 03</title>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Bootstrap CDN CSS-->
@@ -8,47 +20,56 @@
   <link rel="stylesheet" href="assets/css/style.css">  
   <title>APIs Ejercicio Guiado</title>
 </head>
-<body>
-  <head> <h1>APIs Guía de Ejercicios</h1></head>
-  
+<body id="Entregar">
+  <head> <h1>PRUEBA MODULO 03</h1></head>
+
+  <!--SECCIÓN BUSCADOR DE ID-->
+  <form action="">
+    <p>
+      <label for="superhero"
+        >Ingresa el número del SuperHero a buscar</label
+      ><br />
+      <input
+        type="text"
+        name="superhero"
+        id="superhero"
+        placeholder="Busca un heroe 🦸"
+      />
+    </p>
+    <p>
+      <input type="submit" value="Buscar" />
+    </p>
+  </form>
 
 
-<form action="">
-  <input type="number" name="buscador" id="buscador" placeholder="Enter a number" />
-  <button id="myBtn" type="submit" >Buscar</button>
+<!--MUESTRA LA INFORMACIÓN OBTENIDA DE LA API-->
+<section id="hero_biografia">
+    <h2>BIOGRAFIA</h2>
 
-</form>
-
-
-<!--Ejemplo AJAX Valor UF-->
-<section>
-  <h2>BIOGRAFÍA</h2>
-  <div id="biography">
-    <p id="id"></p>
-    <p id="name"></p>
-    <p id="full-name"></p>
-    <p id="alter-egos"></p>  
-    <p id="aliases"></p>  
-    <p id="place-of-birth"></p>
-    <p id="first-appearance"></p>
-    <p id="publisher"></p>
-    <p id="alignment"></p>
   </div>
 </section>
 
+<!--DONDE SE MUESTRA EL GRÁFICO-->
+<section id="hero_grafico">
+  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+</section>
 
-<!--Ejemplo Guiado Plugin
-<div id="miCaja">Valor de la UF</div>-->
 
+<footer>
+  <h3>SUPERHERO INC.  </h3>
+</footer>
 
-  <!--Jquery ejemplo AJAX -->
-  <script src="https://code.jQuery.com/jQuery-2.1.1.min.js"></script>
+<!--<script src="assets/js/GraficoTorta.js"></script>-->
+<script src="assets/js/graficoTorta.js"></script>
+<!--Jquery ejemplo AJAX -->
+<script src="https://code.jQuery.com/jQuery-2.1.1.min.js"></script>
 
-  <!--Mi JS-->
-  <script src="assets/js/app.js"></script>
-
-  <!--Jquery CDN-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--CDN CANVAS-->
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<!--Jquery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--Mi JS-->
+<script src="assets/js/index.js" ></script>
 
 </body>
 </html>
