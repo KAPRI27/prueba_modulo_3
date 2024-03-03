@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: coral;
+}
+
+h2 {
+  color: darkred;
+}
+p {
+  color: rgb(0, 0, 0);
+  background-color: rgb(213, 255, 114);
+}
+
+#seccion_Biografia {
+  background-color: rgb(218, 126, 141);
+}
+
+#biography {
+  background-color: cornflowerblue;
+}
+
+#seccion_informacion {
+  background-color: rgb(119, 112, 109);
+}
