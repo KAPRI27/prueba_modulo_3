@@ -6,7 +6,7 @@ window.onload = function () {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "Desktop Browser Market Share in 2016",
+      text: "GRÁFICO DE HABILIDADES",
     },
     data: [
       {
@@ -18,16 +18,24 @@ window.onload = function () {
         indexLabelFontSize: 16,
         indexLabel: "{label} - {y}%",
         dataPoints: [
-          { y: 51.08, label: "Chrome" },
-          { y: 27.34, label: "Internet Explorer" },
-          { y: 10.62, label: "Firefox" },
-          { y: 5.02, label: "Microsoft Edge" },
-          { y: 4.07, label: "Safari" },
-          { y: 1.22, label: "Opera" },
-          { y: 0.44, label: "Others" },
+          { y: 51.08, label: "INTELIGENCIA" },
+          { y: 27.34, label: "FUERZA" },
+          { y: 10.62, label: "VELOCIDAD" },
+          { y: 5.02, label: "DURABIIDAD" },
+          { y: 4.07, label: "PODER" },
+          { y: 1.22, label: "COMBATE" },
         ],
       },
     ],
   });
   chart.render();
 };
+
+/*
+NO PUDE ENLAZAR LA INFORMACIÓN CON LA API DE HEROES
+REVISÉ LA DOCUMENTACIÓN Y TRATÉ DE MOVER LOS TOOLTIPS
+PERO AL HACERLO SE PERDÍA TODA LA RENDERIZACIÓN
+ASÍ QUE NO INSISTÍ :/
+
+PD: HAY OTRA FORMA DE IR PROBANDO ASÍ COMO LA CONSOLA DE JS??
+*/

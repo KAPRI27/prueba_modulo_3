@@ -2,25 +2,35 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: coral;
+  text-align: center;
+}
+
+#logo_img {
+  width: 70px;
+  height: 50px;
+}
+
+nav,
+footer {
+  background-color: #17202a;
+}
+
+section {
+  background-color: #212f3d;
+}
+h1 {
+  font-size: 35px;
+  display: flex;
 }
 
 h2 {
-  color: darkred;
-}
-p {
-  color: rgb(0, 0, 0);
-  background-color: rgb(213, 255, 114);
+  color: #17202a;
 }
 
-#seccion_Biografia {
-  background-color: rgb(218, 126, 141);
+#frase {
+  font-size: 40px;
 }
 
-#biography {
-  background-color: cornflowerblue;
-}
-
-#seccion_informacion {
-  background-color: rgb(119, 112, 109);
+input {
+  font-size: 20px;
 }
