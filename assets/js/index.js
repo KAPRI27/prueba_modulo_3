@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
@@ -27,6 +28,10 @@ $(document).ready(function () {
         const heroCombat = response.powerstats.combat;
         const heroImage = response.image.url;
 
+        
+        const datosHeroe = (response);
+       
+
         // Mostrar la información en el HTML
         $("#hero_biografia").html(`
         <div id="biografia" class="text-warning bg-dark p-3">
@@ -41,8 +46,44 @@ $(document).ready(function () {
               <img class = "p-1" src="${heroImage}" alt="imagen superheroe">
         </div>
               `);
-      },
-    });
-  });
-  chart.render();
+
+               //contruyendo los item del grafico 
+
+        
+       
+        //AQUÍ SE MUESTRA EL GRÁFICO DE TORTA CONECTADO A LA API
+        var chart = new CanvasJS.Chart("chartContainer", {
+          theme: "light2", // "light1", "light2", "dark1", "dark2"
+          exportEnabled: true,
+          animationEnabled: true,
+          title: {
+            text: "GRÁFICO DE HABILIDADES " + heroName,
+          },
+          data: [
+            {
+              type: "pie",
+              startAngle: 25,
+              toolTipContent: "<b>{label}</b>: {y}%",
+              showInLegend: "true",
+              legendText: "{label}",
+              indexLabelFontSize: 16,
+              indexLabel: "{label} - ({y})",
+              dataPoints: [
+                {
+                  y: parseFloat(datosHeroe.powerstats.intelligence),
+                  label: "INTELIGENCIA",
+                },
+                { y: parseFloat(datosHeroe.powerstats.strength), label: "FUERZA" },
+                { y: parseFloat(datosHeroe.powerstats.speed), label: "VELOCIDAD" },
+                { y: parseFloat(datosHeroe.powerstats.durability), label: "DURABIIDAD" },
+                { y: parseFloat(datosHeroe.powerstats.power), label: "PODER" },
+                { y: parseFloat(datosHeroe.powerstats.combat), label: "COMBATE" },
+              ],
+            },
+          ],
+        });
+        chart.render();
+    }
+  })
+})
 });
